@@ -117,7 +117,7 @@ warn_unqualified_hostname(pam_handle_t *pamh, const char *hostname)
     char *dot;
 
     if (hostname == NULL) {
-        logger(pamh, LOG_NOTICE, "Hostname %s is not set, make sure HOST_NAME is set\n");
+        logger(pamh, LOG_NOTICE, "Hostname is not set, make sure HOST_NAME is set\n");
         return;
     }
 
@@ -126,7 +126,7 @@ warn_unqualified_hostname(pam_handle_t *pamh, const char *hostname)
         return;
     }
 
-    logger(pamh, LOG_NOTICE, "Hostname %s is not qualified, make sure HOST_NAME is set\n");
+    logger(pamh, LOG_NOTICE, "Hostname is not qualified, make sure HOST_NAME is set\n");
 }
 
 static int
